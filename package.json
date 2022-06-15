@@ -1,8 +1,9 @@
 {
   "name": "cron-vue-pro",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./src/cron-vue-pro/index.js",
   "author": "fengjutian",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

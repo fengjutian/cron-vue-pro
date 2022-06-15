@@ -8,9 +8,9 @@
       :visible.sync="dialogVisible"
       width="780px">
       <!-- <cron @change="changeCron" @close="cronPopover=false" i18n="cn"></cron> -->
-      <CronTest @change="changeCron" @close="dialogVisible=false" i18n="cn"></CronTest>
+      <!-- <CronTest @change="changeCron" @close="dialogVisible=false" i18n="cn"></CronTest> -->
       <!-- <CronPro @change="changeCron" @close="dialogVisible=false" i18n="cn"></CronPro> -->
-      <!-- <CronVuePro @change="changeCron" @close="dialogVisible=false" i18n="cn"></CronVuePro> -->
+      <CronVuePro @change="changeCron" @close="dialogVisible=false" i18n="cn"></CronVuePro>
     </el-dialog>
   </div>
 </template>
@@ -19,7 +19,7 @@
 // import {cron} from 'vue-cron';
 
 // import {CronPro} from 'CronVuePro'
-import CronTest from '@/components/CronTest.vue'
+// import CronTest from '@/components/CronTest.vue'
 
 export default {
   name: 'Home',
@@ -32,7 +32,7 @@ export default {
   },
   components: {
     // cron,
-    CronTest,
+    // CronTest,
     // CronPro
   },
   methods: {

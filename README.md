@@ -1,34 +1,56 @@
-# cron-test
+# cron-vue-pro
 
 ## Project setup
 ```
-npm install
+npm i vue-cron
 ```
+##示例
+```
+// 全局引入
+import CronVuePro from './cron-vue-pro'
+Vue.use(CronVuePro);
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+<template>
+ <div class="cron">
+    <h1>vue-cron</h1>
+    <el-button @click='showCronDialog' type="primary">click me</el-button>
+    <el-input v-model="cron" placeholder="请输入定时策略"></el-input>
+    <el-dialog
+      title="提示"
+      :visible.sync="dialogVisible"
+      width="780px">
+      <CronVuePro @change="changeCron" @close="dialogVisible=false" i18n="cn"></CronVuePro>
+    </el-dialog>
+  </div>
+</template>
 
-### Run your unit tests
-```
-npm run test:unit
-```
+<script>
+export default {
+  name: 'Home',
+  data () {
+    return {
+      cronPopover:false,
+      cron:'',
+      dialogVisible: false
+    }
+  },
+  methods: {
+    changeCron(val){
+      this.cron=val
+    },
+    showCronDialog () {
+      this.dialogVisible = true
+    }
+  }
+}
+</script>
 
-### Run your end-to-end tests
 ```
-npm run test:e2e
-```
+  
 
-### Lints and fixes files
-```
-npm run lint
-```
+##参数
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
